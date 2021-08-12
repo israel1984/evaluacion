@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="java.io.tmpdir/evaluacion" />	
+	
+	<cache name="oferta"
+		memoryStoreEvictionPolicy="LFU" 
+		maxEntriesLocalHeap="3000"
+		maxEntriesLocalDisk="1000"
+		eternal="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="86400" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+<!-- 	<cache name="productMobilAll" -->
+<!-- 		memoryStoreEvictionPolicy="LFU"  -->
+<!-- 		maxEntriesLocalHeap="500" -->
+<!-- 		maxEntriesLocalDisk="500" -->
+<!-- 		eternal="false"  -->
+<!-- 		timeToIdleSeconds="0" -->
+<!-- 		timeToLiveSeconds="86400"  -->
+<!-- 		transactionalMode="off"> -->
+<!-- 		<persistence strategy="localTempSwap" /> -->
+<!-- 	</cache> -->
+	
+</ehcache>
+
